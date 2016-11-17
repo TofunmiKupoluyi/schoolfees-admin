@@ -1,0 +1,54 @@
+<h4 class="page-header"> Database </h4>
+<input class="form-control" placeholder="Check for student ..." ng-model="searchQuery" ng-keyup="filter()"></input>
+<br>
+<div class="row">
+    <div class="col-xs-3">
+        <select ng-model="searchclass" class="form-control" ng-change="filter()">
+            <option value="">Class/Year</option>
+            <option value="1">JS1 / Year 7 </option>
+            <option value="2">JS2 / Year 8 </option>
+            <option value="3">JS3 / Year 9 </option>
+            <option value="4">SS1 / Year 10 </option>
+            <option value="5">SS2 / Year 11 </option>
+            <option value="6">SS3 / Year 12 </option>
+        </select>
+    </div>
+    <div class="col-xs-2">
+        <input class="form-control" placeholder="Arm" ng-model="searcharm" ng-change="filter()">  
+    </div>
+    <div class="col-xs-3">
+        <select ng-model="issuccessful" class="form-control" ng-change="filter()">
+            <option value="">Successful/Declined</option>
+            <option value="successful">Successful</option>
+            <option value="declined">Declined</option>
+        </select>
+    </div>
+    <div class="col-xs-4">
+        <select ng-model="narration" class="form-control" ng-change="filter()">
+            <option value="">Select Fee Type</option>
+            <option ng-repeat="x in narrations">{{x.narration}}</option>
+           
+        </select>
+    </div>
+    <span>&nbsp;&nbsp;</span>
+    
+    
+</div>
+<br><p><button ng-click="editClicked(idreference, studentid, studentfirstname, studentlastname, studentclass, studentarm, status)" class="btn {{buttonClickable}}" ng-show="buttonClickable">Edit </button> {{studentid}} - {{studentfirstname}} {{studentlastname}} - {{studentclass}}{{studentarm}} - {{status}}</p>
+<table class="table table-bordered table-hover" border=1>
+    <thead>
+        <th>ID</th>
+        <th> Date Paid </th>
+        <th>First Name </th>
+        <th>Last Name </th>
+        <th>Class </th>
+        <th>Arm </th>
+        <th>Student ID </th>
+        <th>Amount Paid </th>
+        <th>Status </th> 
+        
+    </thead>
+    <tr ng-repeat="x in message" ng-click="productClicked(x.id,x.studentid, x.studentfirstname, x.studentlastname, x.studentclass, x.studentarm, x.status)"><td>{{x.id}} </td><td> {{x.datepaid}}</td><td > {{x.studentfirstname}}</td><td>{{x.studentlastname}}</td><td>{{x.studentclass}}</td><td>{{x.studentarm}}</td><td>{{x.studentid}}</td><td>{{x.amountpaid}}</td><td>{{x.status}}</td></tr>
+
+</table>
+

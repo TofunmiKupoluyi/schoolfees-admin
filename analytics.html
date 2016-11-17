@@ -1,0 +1,79 @@
+<h4 class="page-header"> Analytics </h4>
+<div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-9">
+    </div>
+    <div class="col-xs-1"></div>
+</div>
+<div class="row">
+    <br><br>
+
+    <div class="col-xs-1"></div>
+    <div class="col-xs-9">
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="panel panel-danger" style="background-color: #ffe6e6" ng-click="drawGraph()">
+                    <div class="panel-body text-danger">
+                        <br>
+                        <center><h4><b>{{unsuccessfulCount}}</b></h4>
+                        <p></p>
+                        Total Unsuccessful Transactions
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="panel panel-warning" style="background-color: #fffae6">
+                    <div class="panel-body text-warning">
+                        <br>
+                        <center><h4><b>{{successfulCount}}</b></h4>
+                        <p></p>
+                        Total Successful Transactions
+                        </center>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-xs-4">
+                <div class="panel panel-success" style="background-color: #e6ffee">
+                    <div class="panel-body text-success">
+                        <br>
+                        <center><h4><b>{{successfulAmount}}</b></h4>
+                        <p></p>
+                            Total Successsful Transaction Amount
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-1"></div>
+</div>
+<br>
+<div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-9">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <center> <h4> <small> Graphical Representation </small></h4></center>
+                    <hr>
+                    <br>
+                    <div class="col-xs-8">
+                        <canvas id="chart" class="chart-base" chart-type="chartType" chart-data="data" chart-options="options" chart-labels="labels">
+                        </canvas>
+                    </div>
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-3 btn-group-vertical">
+                        <button class="btn btn-default form-control" ng-click="getNarrationClick()" ><b> Overview </b> </button>
+                        <button ng-repeat="x in narrations" class="btn btn-default form-control" ng-click="getNarrationClick(x.narration)" ><b> {{x.narration}} </b> </button>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-1"></div>
+</div>
+

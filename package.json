@@ -1,0 +1,19 @@
+{
+  "name": "schoolfeesadmin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tofunmi",
+  "license": "ISC",
+  "dependencies": {
+    "angular-chart.js": "^1.0.3",
+    "body-parser": "^1.15.2",
+    "chart.js": "^2.4.0",
+    "express": "^4.14.0",
+    "mysql": "^2.11.1",
+    "nodemon": "^1.11.0"
+  }
+}

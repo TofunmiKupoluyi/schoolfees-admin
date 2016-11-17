@@ -1,0 +1,63 @@
+<form ng-submit="sendForm()">
+    <!--Student Information-->
+    <h4 class="page-header"> Student Information </h4>
+    <!--Student Name Details-->
+    <div class="form-group">
+        <!--<label for="namerow">Student Name:</label>-->
+        <div class="row" id="namerow">
+            <div class="col-md-6">
+                <input style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" id="studentfirstname" class="form-control" ng-model="studentfirstname" placeholder="Enter student first name"></input>
+            </div>
+            <div class="col-md-6">
+                <input style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" class="form-control" id="studentlastname" ng-model="studentlastname" placeholder="Enter student last name"></input>
+            </div>
+        </div>
+    </div>
+    <!--Student Class Details-->
+    <div class="form-group">
+        <!--<label for="classrow">Student Class:</label>-->
+        <div class="row" id="classrow">
+            <div class="col-xs-6">
+                <select style="border-style:none; box-shadow:0 0 0 0;" ng-model="studentclass" class="form-control">
+                    <option value="">Class/Year</option>
+                    <option value="1">JS1 / Year 7 </option>
+                    <option value="2">JS2 / Year 8 </option>
+                    <option value="3">JS3 / Year 9 </option>
+                    <option value="4">SS1 / Year 10 </option>
+                    <option value="5">SS2 / Year 11 </option>
+                    <option value="6">SS3 / Year 12 </option>
+                </select>
+            </div>
+            <div class="col-xs-6">
+                <input style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" class="form-control" placeholder="Arm" ng-model="studentarm">  
+            </div>
+        </div>
+    </div>
+    <!--Student ID-->
+    <div class="form-group">
+        <!--<label for="studentid">Student ID: </label>-->
+        <input style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" id="studentid" class="form-control" ng-model="studentid" placeholder="Enter student ID"></input>
+    </div>
+    <!--Amount Paid-->
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-group">
+                <!--<label for="amountpaid">Amount Paid: </label>-->
+                <input style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" id="amountpaid" class="form-control" ng-model="amountpaid" placeholder="Enter amount paid"></input>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="form-group">
+                <!--<label for="narration">Payment: </label>-->
+                <select style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" id="narration" class="form-control" ng-model="narration">
+                    <option value="">Select Payment</option>
+                    <option ng-repeat="x in narrations" value="{{x.narration}}">{{x.narration}}</option>
+                </select>
+            </div>
+        </div>
+        
+    </div>
+    <hr>
+    <p>{{message}}</p>
+    <button style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" class="form-control btn" type="submit" style=""><b> SUBMIT </b></button>
+</form>

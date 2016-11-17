@@ -1,0 +1,23 @@
+<h4 class="page-header"> Edit/Delete </h4>
+<table class="table table-hover table-bordered">
+    <thead>
+        <th>Student ID </th>
+        <th>First Name </th>
+        <th>Last Name </th>
+        <th>Class </th>
+        <th>Arm </th>
+        <th>Status </th> 
+    </thead>
+    <tbody> 
+        <tr>
+            <td><input style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" class="form-control" value="{{studentid}}" ng-model="studentid"></input></td>
+            <td><input style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" class="form-control" value="{studentfirstname}}" ng-model="studentfirstname"></input></td>
+            <td><input style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" class="form-control" value="{{studentlastname}}" ng-model="studentlastname"></input></td>
+            <td><input style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" class="form-control" value="{{studentclass}}" ng-model="studentclass"></input></td>
+            <td><input style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" class="form-control" value="{{studentarm}}" ng-model="studentarm"></input></td>
+            <td><input style="border-style:none; box-shadow:0 0 0 0; border-radius: 0" class="form-control" value="{{status}}" ng-model="status"></input></td>
+        </tr>
+    </tbody>
+</table>
+{{message}}
+<div class="text-right"><button ng-click="backClick()" class="btn">< Back</button> <button class="btn" ng-click="alterClick()">Alter</button> <button class="btn btn-danger" ng-click="deleteClick()">Delete</button></div>
