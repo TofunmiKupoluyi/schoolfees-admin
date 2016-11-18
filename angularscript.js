@@ -4,8 +4,8 @@ app.config(function($routeProvider){
 $routeProvider
 
 .when("/", {
-    templateUrl:"home.html",
-    controller:"HomeController"
+    templateUrl:"analytics.html",
+    controller:"AnalyticsController"
 })
 .when("/form", {
     templateUrl:"form.html",
@@ -23,10 +23,6 @@ $routeProvider
 .when("/settings", {
     templateUrl:"settings.html",
     controller:"SettingsController"
-})
-.when("/analytics", {
-    templateUrl:"analytics.html",
-    controller:"AnalyticsController"
 })
 .otherwise({
     redirectTo:"/"
