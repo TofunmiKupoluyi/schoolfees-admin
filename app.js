@@ -20,6 +20,7 @@ var connection= mysql.createConnection({
     password: process.env.MYSQL_PASSWORD || "",
     database: process.env.MYSQL_DB || "schoolfees"
 });
+app.listen(process.env.PORT || 3000);
 
 
 
@@ -384,4 +385,3 @@ router.get("/transactions", function(request, response){
     
 
 });
-app.listen(process.env.PORT || 3000);
